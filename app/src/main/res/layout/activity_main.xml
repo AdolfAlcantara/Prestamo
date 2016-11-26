@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.adolfalcantara.prestamos.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monto a Solicitar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="44dp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/etMonto"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:text="Tiempo a pagar (Años)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/textView3"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:layout_below="@+id/etMonto"
+        android:layout_alignLeft="@+id/etMonto"
+        android:layout_alignStart="@+id/etMonto" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/textView3"
+        android:layout_alignRight="@+id/etMonto"
+        android:layout_alignEnd="@+id/etMonto"
+        android:layout_marginTop="22dp"
+        android:id="@+id/etTiempo" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/personal"
+        android:layout_alignTop="@+id/ibVivienda"
+        android:layout_toRightOf="@+id/etTiempo"
+        android:layout_toEndOf="@+id/etTiempo"
+        android:id="@+id/ibPersonal"
+        android:onClick="personal"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/auto"
+        android:id="@+id/ibAuto"
+        android:layout_alignTop="@+id/ibVivienda"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4"
+        android:onClick="auto"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vivienda"
+        android:id="@+id/ibVivienda"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3"
+        android:onClick="vivienda"/>
+
+</RelativeLayout>
